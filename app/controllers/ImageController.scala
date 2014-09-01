@@ -5,7 +5,7 @@ import aws.AWSImageUtils
 
 object ImageController extends Controller {
 
-  // Simple file updaloader to file system
+  // Simple file uploader to file system
   def upload = Action(parse.multipartFormData) { request =>
     request.body.file("picture").map { picture =>
       import java.io.File
