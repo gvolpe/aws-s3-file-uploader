@@ -39,8 +39,9 @@ object ImageController extends Controller {
   def queryS3(name: String) = Action { implicit request =>
     try {
       val s3obj = AWSFileService.query(name)
-      val file = S3FileHelper.convert(s3obj.getObjectContent())
-      val source = scala.io.Source.fromFile(file)(scala.io.Codec.ISO8859)
+      //      val file = S3FileHelper.convert(s3obj.getObjectContent())
+      //      val source = scala.io.Source.fromFile(file)(scala.io.Codec.ISO8859)
+      val source = scala.io.Source.fromInputStream(s3obj.getObjectContent())(scala.io.Codec.ISO8859)
       val byteArray = source.map(_.toByte).toArray
       source.close()
       Ok(byteArray).as(s3obj.getObjectMetadata().getContentType())
