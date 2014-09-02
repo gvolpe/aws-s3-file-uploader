@@ -21,6 +21,10 @@ The API will be listen at [localhost:9000](http://localhost:9000)
 
 Upload images to the API local machine
 
+##### GET /images/aws?name=filename.ext
+
+Query images uploaded to AWS S3
+
 ##### POST /images/aws
 
 Upload images to AWS S3
