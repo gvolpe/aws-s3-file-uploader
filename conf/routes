@@ -5,6 +5,8 @@
 # Home page
 GET     /                           controllers.Application.index
 POST    /images/local               controllers.ImageController.upload
+
+GET		/images/aws                 controllers.ImageController.queryS3(name: String)
 POST    /images/aws                 controllers.ImageController.uploadS3
 
 # Map static resources from the /public folder to the /assets URL path
