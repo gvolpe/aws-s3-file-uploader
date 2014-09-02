@@ -1,7 +1,11 @@
-Image Uploader API (Play application)
-=====================================
+aws-s3-file-uploader (Play application)
+=======================================
 
 In order to execute this project, is required to have installed the latest version of [Play framework.](https://www.playframework.com/download)
+
+### Configuration
+
+Before execution, you must have the AWS credentials configuration. See more at the oficial web site documentation: http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 
 ### Execute
 
